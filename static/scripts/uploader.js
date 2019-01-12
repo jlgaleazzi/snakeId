@@ -26,14 +26,16 @@
 				var venom = obj.venomous;
 				if (venom === 'true') {
 					// display venom msg
+					var msg = "Venomous";
 					$('.box').css({'background-color':'red'});
 					$('#venom').css({'display':'block'});
 					$('#venom').css({'color':'white'});
 					$('#snakebox').css({'background-color':'red'});
-					$('#venom').text(snakeName);
+					$('#venom').html("<p>"+snakeName+"</p><em>"+msg+"</em>");
 				} 
 				if (venom === 'undetermined')
 				{	
+					
 					$('#undetermined').css({'display':'block'});
 					$('#venom').text("Can't Identify");
 					$('#undetermined').css({'color':'black'});
@@ -41,10 +43,11 @@
 				}
 				if (venom === 'false')
 				{
+					var msg = "Not venomous";
 					$('#notvenom').css({'display':'block'});
 					$('#notvenom').css({'background-color':'#aad339'});
 					$('#notvenom').css({'color':'black'});
-					$('#notvenom').text(snakeName);
+					$('#notvenom').html("<p>"+snakeName+"</p><em>"+msg+"</em>");
 					$('.box').css({'background-color':'#aad339'});
 					
 				}

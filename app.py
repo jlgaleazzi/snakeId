@@ -5,10 +5,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 from flask import Flask, request, jsonify, render_template
-from keras.preprocessing import image
-from keras.applications.vgg19 import (
-    VGG19, preprocess_input, decode_predictions)
-from keras import backend as K
+
 
 
 

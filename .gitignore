@@ -1,0 +1,14 @@
+#ignore contents of folder pics
+__pycache__
+.DS_Store
+.vscode/
+models/bottleneck/
+models/checkpoint/
+models/retrain_logs/
+models/_retrain_checkpoint.data-00000-of-00001
+models/_retrain_checkpoint.index
+models/_retrain_checkpoint.meta
+__pycache__/app.cpython-36.pyc
+__pycache__/app.cpython-37.pyc
+.vscode/launch.json
+models/bottleneck/*

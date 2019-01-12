@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/venom.css')}}">
+    <title>Venom Detector</title>
+  </head>
+  <body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Upload</a>
+            <a class="nav-link" href="/snakes">Snakes</a>
+            <a class="nav-link" href="#">About</a>
+          </nav>
+        </div>
+      </header>
+    
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Venom</h1>
+        <div class="container">
+              <form class="box" method="post" action="/" enctype="multipart/form-data">
+                <div class="text-center mb-4" id="snakebox">
+                  <img id="snake" src="{{url_for('static', filename='img/snake_loader.gif')}}">
+                 <!-- <svg class="box__icon" xmlns="http://www.w3.org/2000/svg" width="50" height="43" viewBox="0 0 50 43"><path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"/></svg>
+                  -->
+                </div>
+                <div id="venom" class="box__venomous">its Venomous</div>
+                <div id="notvenom" class="box__Non_venomous">Not Venomous</div>
+                <div id="undetermined" class="box__undetermined">Can't Idenitfy Snake <span></span>.</div>
+            </form> 
+            <div style="height:20px"></div>
+            <input type="file" id="picFile" name="file" class ="inputfile" accept="image/*">
+            <label for="picFile"><strong>Choose a file</strong></label>
+        
+      </div>
+      </main>
+    
+      <footer class="mastfoot mt-auto">
+        <div class="inner"></div>
+        </div>
+      </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='scripts/uploader.js')}}"></script>
+  </body>
+</html>

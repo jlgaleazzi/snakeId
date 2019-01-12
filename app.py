@@ -17,7 +17,7 @@ app.config['LABELFILE'] = 'models/output_labels.txt'
 
 names_dict =    {"checkeredGarter":"Checkered Garter Snake" , "coachwhip":"Coachwhip Snake",
                  "dekaysbrown":"Dekays Brown Snake", "hognose":"Hognose Snake",
-                 "kingsnakespeckled":"Kingsnake, Speckeled", "kingsnakeGrayBanded":"Kingsnake, Grey Banded",
+                 "kingsnakespeckled":"Kingsnake, Speckeled", "kingsnakegraybanded":"Kingsnake, Grey Banded",
                  "ratsnake":"Ratsnake","ribbonsnake":"Ribbon Snake",
                  "ringneck":"Ring Neck Snake", "roughearth":"Rough Earth Snake",
                  "smoothgreen":"Green Snake", "watersnake":"Water Snake", 

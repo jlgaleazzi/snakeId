@@ -3,7 +3,7 @@ __pycache__
 .DS_Store
 .vscode/
 models/bottleneck/
-models/checkpoint/
+models/checkpoint
 models/retrain_logs/
 models/_retrain_checkpoint.data-00000-of-00001
 models/_retrain_checkpoint.index

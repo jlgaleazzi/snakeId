@@ -122,6 +122,10 @@ def load_graph(model_file):
 def found_in_dict(label):
         return venom_dict[label]
 
+@app.route('/about')
+def show_about():
+        return render_template('about.html')
+
 @app.route('/snakes')
 def show_snakes():
         return render_template('snakes.html')

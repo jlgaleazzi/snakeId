@@ -15,7 +15,9 @@ body {
 .fixed {
     width: 400px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 .flex-item{
     flex-grow: 1;
+    max-width: 800px;
 }

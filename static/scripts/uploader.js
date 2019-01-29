@@ -7,6 +7,7 @@
 			$('#venom').css({'display':'none'});
 			$('#undetermined').css({'display':'none'});
 			$('#notvenom').css({'display':'none'});
+			$('#snakebox').css({'background-color':'aad339'});
 			$('#snake').attr("src",'static/img/snake_loader4.gif');
 			var file_data = $('#picFile').prop('files')[0]; 
 			var form_data = new FormData();
@@ -31,7 +32,7 @@
 					$('#venom').css({'display':'block'});
 					$('#venom').css({'color':'white'});
 					$('#snakebox').css({'background-color':'red'});
-					$('#venom').html("<p>"+snakeName+"</p><em>"+msg+"</em>");
+					$('#venom').html("<p><a href='/snakes#"+snakeName+"'>"+snakeName+"</a></p><em>"+msg+"</em>");
 				} 
 				if (venom === 'undetermined')
 				{	
@@ -47,7 +48,7 @@
 					$('#notvenom').css({'display':'block'});
 					$('#notvenom').css({'background-color':'#aad339'});
 					$('#notvenom').css({'color':'black'});
-					$('#notvenom').html("<p>"+snakeName+"</p><em>"+msg+"</em>");
+					$('#notvenom').html("<p><a href='/snakes#"+snakeName+"'>"+snakeName+"</a></p><em>"+msg+"</em>");
 					$('.box').css({'background-color':'#aad339'});
 					
 				}

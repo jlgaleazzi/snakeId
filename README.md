@@ -5,12 +5,9 @@ https://snakeid.herokuapp.com/
 
 this app wes created as the final project for the UT at Austin, Data Visualization Bootcamp
 
-The stack used to create it was
+The stack used to create it was:
 
 [Flask Server](https://flask.palletsprojects.com/en/1.1.x/)
-
 Python
-
 [TensorFlow](https://www.tensorflow.org/)
-
 JS / Jquery 

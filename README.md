@@ -13,7 +13,7 @@ this app was created as the final project for the UT at Austin, Data Visualizati
 The stack used to create it was:
 
 [Flask Server](https://flask.palletsprojects.com/en/1.1.x/)\
-Python\
+Python 2.7\
 [TensorFlow](https://www.tensorflow.org/)\
 JS / Jquery
 

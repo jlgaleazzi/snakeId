@@ -30,8 +30,17 @@ const PicLoader = props => {
     const handleDrop = e => {
         e.preventDefault();
         e.stopPropagation();
-        let file = e.dataTransfer.files[0]
-        dispatch({type: 'ADD_FILE',file})
+        let file = e.dataTransfer.files[0];
+        if (file != null) {
+            let fr = new FileReader();
+            fr.onload = function(event){
+                let img = event.target.result;
+                dispatch({type: 'FILE_DROPPED', image:img})
+                }
+            fr.readAsDataURL(file);
+        }
+
+        
         e.dataTransfer.clearData();
         dispatch({type: 'SET_DROP_DEATH', dropDepth:0});
         dispatch({type: 'SET_IN_DROP_ZONE', inDropZone:false })
@@ -41,13 +50,13 @@ const PicLoader = props => {
 
 
     return (
-        <div className={'drag-drop-zone'}
+        <div className={data.inDropZone ? 'drag-drop-zone inside-drag-area': 'drag-drop-zone'}
         onDrop = { e => handleDrop(e)}
         onDragOver = { e => handleDragOver(e)}
         onDragEnter = { e => handleDragEnter(e) }
         onDragLeave = { e => handleDragLeave(e)} 
         >
-        <img src={snake}></img>
+        <img src={data.image !== null ? data.image : snake}></img>
     </div>
         
     )

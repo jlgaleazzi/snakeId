@@ -8,14 +8,14 @@ const PicHolder = () => {
                 return { ...state, dropDepth: action.dropDepth};
             case 'SET_IN_DROP_ZONE':
                 return {...state, inDropZone: action.inDropZone};
-            case 'ADD_FILE':
-                return {...state, file:state.file}
+            case 'FILE_DROPPED':
+                return {...state, image:action.image}
             default:
                 return state;
         }
     }
     const [data, dispatch] = useReducer(
-        reducer, {dropDepth:0, inDropZone: false, file:''}
+        reducer, {dropDepth:0, inDropZone: false, image:null}
     )
 
 

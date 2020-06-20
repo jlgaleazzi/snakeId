@@ -132,7 +132,6 @@ def show_snakes():
 
 @app.route('/')
 def show_form():
-        print ('get printing - form')
         return render_template('index.html')
 
 @app.route('/', methods=['POST'])

@@ -13,7 +13,7 @@ app.config['THUMBNAILS'] = 'static/thumbnails'
 app.config['MODEL'] = 'models/output_graph.pb'
 app.config['LABELFILE'] = 'models/output_labels.txt'
 
-names_dict = {"checkeredGarter": "Checkered Garter Snake", "coachwhip": "Coachwhip Snake",
+names_dict = {"checkeredgarter": "Checkered Garter Snake", "coachwhip": "Coachwhip Snake",
               "dekaysbrown": "Dekays Brown Snake", "hognose": "Hognose Snake",
               "kingsnakespeckled": "Kingsnake, Speckeled", "kingsnakegraybanded": "Kingsnake, Grey Banded",
               "ratsnake": "Ratsnake", "ribbonsnake": "Ribbon Snake",

@@ -134,13 +134,16 @@ def show_snakes():
 def show_form():
         return render_template('index.html')
 
-@app.route('/', methods=['POST'])
+
+
+@app.route('/idmysnake', methods=['POST'])
 def upload_file(tn=None):
         if request.files.get('file'):
                 print("GOT FILE")
                 # read the file
                 file = request.files['file']
                 # get the original filename extension
+                print(f'file :{file.filename}') 
                 ext  = file.filename.split('.')[1]
                 # create a filename based on img = random number (1-20) date and file extension
                 fname = 'img_snake.' + ext

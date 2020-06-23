@@ -1,6 +1,7 @@
 import React from 'react';
 import snake from '../assets/snake.png'
 
+
 const PicLoader = props => {
     const {data, dispatch} = props;
     
@@ -44,13 +45,31 @@ const PicLoader = props => {
                 dispatch({type: 'FILE_SELECTED', image:img})
                 }
             fr.readAsDataURL(file);
+            sendImageToServer(file)
+                .then(data => {
+                    console.log(data);
+                })
         }
         dispatch({type: 'SET_DROP_DEPTH', dropDepth:0});
         dispatch({type: 'SET_IN_DROP_ZONE', inDropZone:false })
     }
 
-    const sendImageToServer = (img) => {
+    async function sendImageToServer(img){
         const form_data = new FormData();
+        form_data.append('file',img);
+        const url = '/idmysnake';
+        const request_Obj = {
+            method: 'POST',
+            cache: 'no-cache',
+            body: form_data,
+            headers: {
+                'accept': '*/*',
+                'Accept-Language': 'en-US,en;q=0.8',
+              },
+        }
+       
+        const response = await fetch(url, request_Obj);
+        return response.json();
     }
     
 

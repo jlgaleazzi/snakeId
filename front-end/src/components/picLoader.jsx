@@ -76,13 +76,13 @@ const PicLoader = props => {
 
     return (
     <div className="pic-container">
-        <div className={data.inDropZone ? 'drag-drop-zone inside-drag-area': 'drag-drop-zone'}
+        <div className={data.inDropZone ? 'drag-drop-zone inside-drag-area ': 'drag-drop-zone'}
         onDrop = { e => handleDrop(e)}
         onDragOver = { e => handleDragOver(e)}
         onDragEnter = { e => handleDragEnter(e) }
         onDragLeave = { e => handleDragLeave(e)} 
         >
-            <img className='img-fluid' src={data.image !== null ? data.image : snake}></img>
+            <img className='snake-img' src={data.image !== null ? data.image : snake}></img>
         </div>
         <div className='upload-btn-wrapper'>
             <button className='btn btn-primary btn-lg'>

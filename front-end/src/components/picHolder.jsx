@@ -1,4 +1,4 @@
-import React, {useReducer, useEffect} from 'react';
+import React, {useReducer} from 'react';
 import PicLoader from './picLoader';
 
 const PicHolder = () => {
@@ -13,12 +13,16 @@ const PicHolder = () => {
                 return {...state, inDropZone: action.inDropZone};
             case 'FILE_SELECTED':
                 return {...state, image:action.image}
+            case 'GOT_RESULT':
+                return {...state, result:action.result}
+            case 'ANALIZING':
+                return {...state, analizing:action.analizing}
             default:
                 return state;
         }
     }
     const [data, dispatch] = useReducer(
-        reducer, {dropDepth:0, inDropZone: false, image:null}
+        reducer, {dropDepth:0, inDropZone: false, image:null, result:null, analizing:false}
     )
 
 

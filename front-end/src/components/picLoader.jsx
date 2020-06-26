@@ -77,22 +77,38 @@ const PicLoader = props => {
         return response.json();
     }
     
+    const getProperties = () => {
+        
+        if (data.result) {
+            if (data.result.venomous === 'true') {
+                return {bg:'danger',label:'venomous'}
+            } 
+            if (data.result.venomous === 'undetermined') 
+            {
+                return {bg:'warning',label:''}
+            }
+        }
+        return {bg:'light',label:'Non venomous'}
+    }
+    
 
 
     return (
+        
     <div className="pic-container">
-        <div //className={data.inDropZone ? 'drag-drop-zone inside-drag-area ': 'drag-drop-zone'}
+       
+        <div 
         onDrop = { e => handleDrop(e)}
         onDragOver = { e => handleDragOver(e)}
         onDragEnter = { e => handleDragEnter(e) }
         onDragLeave = { e => handleDragLeave(e)} 
         >
-        <Card style={{width:'30rem', height:'auto'}}>
-            <Card.Body>
+        <Card bg={getProperties().bg} style={{width:'30rem', height:'auto'}}>
+            <Card.Body >
                 <Card.Img variant='top' className={'card-img-top'} src={data.image !== null ? data.image : snake}/>
                 <Card.Title>{data.result !== null ? data.result.snake : "Upload a Snake Pic"}</Card.Title>
                 <Card.Text>
-                    {data.result !== null ? data.result.venomous : ""} 
+                   {data.result !== null ? getProperties().label : ''}
                 </Card.Text>
                 <div className='upload-btn-wrapper'>
                 <Button className='btn btn-primary btn-lg'>

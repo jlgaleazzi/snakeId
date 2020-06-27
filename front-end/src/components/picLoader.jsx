@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap'
 import snake from '../assets/snake.png'
-import LoadingDots from './common/loadingDits';
+
 
 
 

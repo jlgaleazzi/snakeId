@@ -1,8 +1,4 @@
 
-body {
- background-color: #EEA359; 
-}
-
 .pic-container {
     margin: 0 auto;
     max-width: 510px;
@@ -34,4 +30,15 @@ body {
       top: 0;
       opacity: 0;
       max-width: 200px;
+  }
+
+  .analizing span {
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+      background-color: #ffd957;
+      border-radius: 50%;
+      display: inline-block;
+
+
   }

@@ -1,0 +1,116 @@
+const snakeData = [
+    {
+        longName: "Coachwhip Snake",
+        sciName: "Masticophis flagellum",
+        image: "img/snakes/image002.jpg",
+        description:
+            "is a species of nonvenomous colubrid snake commonly referred to as the coachwhip or the whip snake, which is endemic to the United States and Mexico.Coachwhips are diurnal,and actively hunt and eat lizards, small birds, and rodents. Coachwhips subdue prey by grasping and holding them with their jaws and do not use constriction.[6] They tend to be sensitive to potential threats,and often bolt at the first sign of one; they are extremely fast- moving snakes. They are curious snakes with good eyesight, and are sometimes seen raising their heads above the level of the grass or rocks to see what is around them.They can slither up to 15 mph."
+    },
+    {
+        longName: "Checkered Garter Snake",
+        sciName: "Thamnophis marcianus",
+        image: "img/snakes/image003.jpg",
+        description:
+            "is a species of nonvenomous garter snake endemic to the southwestern United States, Mexico, and Central America. It's diet includes small frogs, toads, small fish, and earthworms."
+    },
+    {
+        longName: "Dekays Brown Snake",
+        sciName: "Storeria dekayi",
+        image: "img/snakes/image003.jpg",
+        description:
+            "is a species of nonvenomous colubrid snake, commonly referred to as the brown snake or De Kay's snake.It is native to Southern Ontario and Quebec,  most of the eastern half of the United States, through Mexico, Guatemala, Honduras, and possibly El Salvador. It primarily feeds on slugs, snails, and earthworms.",
+    },
+    {
+        longName: "Hognose Snake",
+        sciName: "Heterodon",
+        image: "img/snakes/image004.jpg",
+        description:
+            "is a genus of nonvenomous colubrid snakes endemic to North America.They are stout with upturned snouts and are perhaps best known for their characteristic threat displays.Their diet includes rodents,lizards and toads, with certain heterodon having an immunity to the toxins toads secrete.",
+    },
+    {
+        longName: "Kingsnake, Grey Banded",
+        sciName: "Lampropeltis alterna",
+        image: "img/snakes/image005.jpg",
+        description:
+            "is a species of nonvenomous snake in the family Colubridae.The species is endemic to the southwestern United States and adjacent Mexico. It feeds primarily on lizards. It will occasionally feed on small rodents, frogs,and the eggs of ground nesting birds, lizards, and other snakes.",
+    },
+    {
+        longName: "Kingsnake, Speckeled",
+        sciName: "Lampropeltis holbrooki",
+        image: "img/snakes/image006.jpg",
+        description:
+            "Is a nonvenomous species of kingsnake, which is endemic to the United States. It's found in the central to southern United States from southern Iowa to the Gulf of Mexico. The diet of the speckled kingsnake consists of mammals, birds, rodents, frogs, lizards, and other snakes. It kills by constriction.",
+    },
+    {
+        longName: "Ratsnake",
+        sciName: "Pantherophis obsoletus",
+        image: "img/snakes/image007.jpg",
+        description:
+            "Also known as the western rat snake, black rat snake, pilot black snake, or simply black snake is a non-venomous species of Colubridae found in central North America. Its color variations include the Texas ratsnake. Rat snakes live in a variety of habitats; some overlap each other. Rat snakes are excellent climbers and spend time in trees. They live in habitats ranging from a rocky hillside to flat farmland. Though they will often consume mice, voles, and rats, western rat snakes are far from specialists at this kind of prey and will readily consume any small vertebrate they can catch. Other prey opportunistically eaten by this species can include other snakes (including both those of their own and other species), frogs, lizards, chipmunks, squirrels, juvenile rabbits, juvenile opossums, songbirds, and bird eggs.",
+    },
+    {
+        longName: "Ribbon Snake",
+        sciName: "Thamnophis proximus",
+        image: "img/snakes/image008.jpg",
+        description:
+            "known commonly as the western ribbon snake, is a species of garter snake in the subfamily Natricinae of the family Colubridae. The species is endemic to the western United States, Mexico, and Central America. Its diet includes amphibians, such as frogs, but it will also consume lizards, and small rodents.",
+    },
+    {
+        longName: "Ringneck Snake",
+        sciName: "Diadophis punctatus",
+        image: "img/snakes/image009.jpg",
+        description:
+            "commonly known as the ring-necked snake or ringneck snake, is a harmless species of colubrid snake found throughout much of the United States, central Mexico, and southeastern Canada. Ring-necked snakes are secretive, nocturnal snakes, so are rarely seen during the day time. They are slightly venomous, but their nonaggressive nature and small, rear-facing fangs pose little threat to humans who wish to handle them. They are best known for their unique defense posture of curling up their tails, exposing their bright red-orange posterior, ventral surface when threatened. The diet of the ring-necked snake consists primarily of smaller salamanders, earthworms, and slugs, but they also sometimes eat lizards, frogs, and some juvenile snakes of other species.",
+    },
+    {
+        longName: "Rough Earth Snake",
+        sciName: "Haldea striatula",
+        image: "img/snakes/image010.jpg",
+        description:
+            "Commonly called the rough earth snake,is a species of nonvenomous natricine colubrid snake native to the southeastern United States. The rough earth snake is found from southern Virginia to northern Florida, west along the Gulf Coast to southern Texas, and north into south- central Missouri and southeastern Kansas.The rough earth snake is fossorial, hiding beneath logs, rocks, or ornamental stones, in leaf litter, or in compost piles and gardens.The species is found in a variety of forested habitats with plenty of ground cover, as well as in many urban areas.It can reach very high densities in urban gardens, parks, and vacant lots.It feeds almost exclusively on earthworms, although slugs, snails, sow bugs, insect eggs and larvae have also been found in the stomach.",
+    },
+    {
+        longName: "Green Snake",
+        sciName: "Opheodrys vernalis",
+        image: "img/snakes/image011.jpg",
+        description:
+            "is a species of North American nonvenomous snake in the family Colubridae. It is found in marshes, meadows, open woods, and along stream edges and is native to regions of Canada, the United States, and northern Mexico. The green snake mostly eats insects and spiders, including spineless caterpillars, harvestmen, moths, ants, snails, worms, and slugs. While hunting, it uses both chemical and visual clues to find prey, and kills with a strike instead of constriction.",
+    },
+    {
+        longName: "Water Snake",
+        sciName: "Nerodia",
+        image: "img/snakes/image012.jpg",
+        description:
+            "is a genus of nonvenomous colubrid snakes commonly referred to as water snakes due to their aquatic behavior. The genus includes nine species, all native to North America. Water snakes, as their name implies, are largely aquatic. They spend the vast majority of their time in or very near permanent sources of water. Often they can be found basking on tree branches which overhang slow-moving streams or ponds. Their primary diet is fish and amphibians, and they are quite adept at catching both in their aquatic environment. They will also consume small reptiles and rodents that live near water.",
+    },
+    {
+        longName: "Yellow Bellied Racer",
+        sciName: "Coluber constrictor",
+        image: "img/snakes/image013.jpg",
+        description:
+            "is a species of nonvenomous snake in the family Colubridae. The species is endemic to North America and Central America. Eleven subspecies, including the nominotypical subspecies, are recognized, which as a group are commonly referred to as the eastern racers. Racers are diurnal, active predators. They are fast moving and are often quick to bite if handled. They generally eat rodents, lizards and frogs, but as juveniles they will also consume various kinds of soft-bodied insects. They are fairly nervous snakes, and as such, do not typically fare well in captivity."
+    },
+    {
+        longName: "Copperhead Snake",
+        sciName: "Agkistrodon contortrix",
+        image: "img/snakes/image014.jpg",
+        description:
+            "is a species of venomous snake endemic to Eastern North America, a member of the subfamily Crotalinae (pit vipers).Roughly 90% of its diet consists of small rodents, such as mice and voles. It has also shown fondness for large insects and frogs, and though highly terrestrial,  have been known to climb trees to gorge on emerging cicadas."
+    },
+    {
+        longName: "Western Diamnondback Rattler Snake",
+        sciName: "Crotalus atrox",
+        image: "img/snakes/image015.jpg",
+        description:
+            "is a venomous snake, a species of pit viper, found in the southeastern United States. Adults are large and capable of delivering a painful and potentially fatal bite. Although their aggression has been exaggerated, individuals may bite when feeling threatened or being handled.This is the world's only semiaquatic viper, usually found in or near water, particularly in slow-moving and shallow lakes, streams, and marshes. The snake is a strong swimmer and has even been seen swimming in the ocean. Its diet includes mammals, birds, amphibians, fish, snakes, small turtles, and small alligators. Cannibalism has also been reported. Normally, though, the bulk of its diet consists of fish and frogs.On occasion, juvenile specimens feed on invertebrates."
+    },
+    {
+        longName: "Coral Snake",
+        sciName: "Micrurus tener",
+        image: "img/snakes/image017.jpg",
+        description:
+            "is a species of venomous snake in the family Elapidae. The species is endemic to the southern United States and northeastern and central Mexico.The primary diet consists of other snakes, primarily earth snakes, and other small fossorial species. It is cannibalistic. It will also occasionally eat small lizards, but the consumption of rodents by coral snakes is rare. Coral snakes are shy, secretive animals,typically nocturnal. They spend most of their time hiding in leaf litter, under logs."
+    },
+
+
+]

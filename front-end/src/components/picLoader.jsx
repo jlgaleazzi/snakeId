@@ -4,7 +4,6 @@ import snake from '../assets/snake.png'
 
 
 
-
 const PicLoader = props => {
     const { data, dispatch } = props;
 
@@ -108,10 +107,10 @@ const PicLoader = props => {
                         <Card.Img variant='top' className={'card-img-top'} src={data.image !== null ? data.image : snake} />
                         <Card.Text></Card.Text>
                         <Card.Title>{
-                            data.analizing ? <p>Analizing Picture</p> : (data.result !== null ? data.result.snake : "Upload a Snake Pic")}
+                            data.analizing ? <span>Analizing Picture</span> : (data.result !== null ? data.result.snake : "Upload a Snake Pic")}
                         </Card.Title>
                         <Card.Text>
-                            {data.result !== null ? getProperties().label : <p>&nbsp;</p>}
+                            {data.result !== null ? getProperties().label : <span>&nbsp;</span>}
                         </Card.Text>
                         <div className='upload-btn-wrapper'>
                             <Button className='btn btn-primary' disabled={data.analizing}>

@@ -132,9 +132,9 @@ def show_about():
     return render_template('about.html')
 
 
-@app.route('/snakes')
+@app.route('/api')
 def show_snakes():
-    return render_template('snakes.html')
+    return app.send_static_file('api/snakes.json')
 
 
 @app.route('/')

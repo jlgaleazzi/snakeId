@@ -31,7 +31,6 @@ const PicLoader = props => {
     }
 
     const handleDrop = e => {
-        console.log('handleDrop')
         e.preventDefault();
         e.stopPropagation();
         let file = null;

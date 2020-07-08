@@ -6,8 +6,8 @@ const Snakes = (props) => {
 
         < Card bg='light' style={{ width: '30rem' }}>
             <Card.Body>
-                <Card.Img variant="top" src={props.data.image} />
                 <Card.Title>{props.data.longName}</Card.Title>
+                <Card.Img variant="top" src={props.data.image} />
                 <Card.Subtitle>({props.data.sciName})</Card.Subtitle>
                 <Card.Text style={{ textAlign: 'left' }}>
                     {props.data.description}

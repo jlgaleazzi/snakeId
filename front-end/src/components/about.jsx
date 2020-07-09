@@ -12,10 +12,10 @@ const About = () => {
                         Central Texas A.I. Snake Identifier
                     </Card.Title>
                     <Card.Text style={{ textAlign: "left" }}>
-                        <p>Snake id  is a simple machine learning project aiming to identify snakes commonly found in central Texas.</p>
-                        <p>The project was created as part of a Machine Learning group project for the Visualization and Data Analysis course at UT@Austin </p>
-                        <p>It utilizes the TensorFlow framework and TensorFlow Hub to ingest pre trained images. </p>
-                        <p>For a detailed explanation and tutorial read the <a href='https://www.tensorflow.org/hub/tutorials/image_retraining'> Image retraining tutorial </a> at the TensorFlow website</p>
+                        Snake id  is a simple machine learning project aiming to identify snakes commonly found in central Texas.<br />
+                        The project was created as part of a Machine Learning group project for the Visualization and Data Analysis course at UT@Austin.<br />
+                        It utilizes the TensorFlow framework and TensorFlow Hub to ingest pre trained images. <br />
+                        For a detailed explanation and tutorial read the <a href='https://www.tensorflow.org/hub/tutorials/image_retraining'> Image retraining tutorial </a> at the TensorFlow website<br />
                         <div>
                             Mauricio Gonzalez<br />
                             Juan L. Galeazzi<br />

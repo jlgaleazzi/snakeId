@@ -1,0 +1,44 @@
+
+.pic-container {
+    margin: 0 auto;
+    max-width: 510px;
+    text-align: center;
+}
+.drag-drop-zone {
+    border: thick dashed #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.drag-drop-zone.inside-drag-area {
+    border: thick dashed #ffff;
+    opacity: 0.7;
+  }
+
+  .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 0 auto;
+  }
+
+  .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      max-width: 200px;
+  }
+
+  .analizing span {
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+      background-color: #ffd957;
+      border-radius: 50%;
+      display: inline-block;
+
+
+  }

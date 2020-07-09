@@ -1,11 +1,11 @@
 import os
 import time
 import random
+import json
 from PIL import Image
 import numpy as np
 import tensorflow as tf
-from flask import Flask, request, jsonify, render_template
-
+from flask import Flask, request, jsonify, render_template, send_from_directory
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -105,7 +105,7 @@ def read_tensor_from_image_file(file_name,
 
 def load_labels(label_file):
     label = []
-    proto_as_ascii_lines = tf.gfile.GFile(label_file).readlines()
+    proto_as_ascii_lines = tf.io.gfile.GFile(label_file).readlines()
     for l in proto_as_ascii_lines:
         label.append(l.rstrip())
     return label
@@ -127,29 +127,42 @@ def found_in_dict(label):
     return venom_dict[label]
 
 
-@app.route('/about')
-def show_about():
-    return render_template('about.html')
-
-
 @app.route('/api')
 def show_snakes():
-    return app.send_static_file('api/snakes.json')
+    with open(os.path.join(app.root_path, 'static/api/snakes.json')) as f:
+        data = json.load(f)
+    return json.dumps(data)
 
 
 @app.route('/')
+@app.route('/snakes')
+@app.route('/snakes/')
+@app.route('/about')
 def show_form():
     return render_template('index.html')
 
 
-@app.route('/idmysnake', methods=['POST'])
+@app.route('/snakes/<snake>')
+def show_snake(snake):
+    return render_template('index.html')
+
+
+@app.route('/img/snakes/<image_name>')
+def get_image(image_name):
+    # print(f"image name: {image_name}")
+    dir = os.path.join(app.root_path, 'static/img/snakes/')
+    print(f'dir {dir}')
+    return send_from_directory(dir, image_name)
+
+
+@ app.route('/idmysnake', methods=['POST'])
 def upload_file(tn=None):
     if request.files.get('file'):
-        print("GOT FILE")
+        #print("GOT FILE")
         # read the file
         file = request.files['file']
         # get the original filename extension
-        print(f'file :{file.filename}')
+        # print(f'file :{file.filename}')
         ext = file.filename.split('.')[1]
         # create a filename based on img = random number (1-20) date and file extension
         fname = 'img_snake.' + ext
@@ -189,19 +202,20 @@ def upload_file(tn=None):
 
         winning_label = labels[top_k[0]]
         winning_pct = results[top_k[0]]
-        print(winning_label)
+        # print(winning_label)
         long_name = names_dict[winning_label]
 
         venomous = "false"
-        print("accuracy "+str(winning_pct))
+        #print("accuracy "+str(winning_pct))
         if winning_pct < 0.5:
             venomous = "undetermined"
         else:
             venomous = found_in_dict(long_name)
 
-        print(long_name + " is venomous? : "+venomous)
+        #print(long_name + " is venomous? : "+venomous)
         img = create_thumbnail(file_name)
-        print("image "+img)
+        slug = long_name.lower().replace(" ", "-")
+        # print("image "+img)
         js = '{"img":"'+img+'","venomous":"' + \
-            venomous+'","snake":"'+long_name+'"}'
+            venomous+'","snake":"'+long_name+'","slug":"'+slug+'"}'
         return js

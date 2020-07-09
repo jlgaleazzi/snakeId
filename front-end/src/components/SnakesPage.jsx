@@ -32,7 +32,7 @@ const SnakePage = () => {
 
     return (
         <div className='pic-container'>
-            {state.map((snake, i) => <Snakes data={snake} key={i} />)}
+            {state.map((snake, i) => <Snakes data={snake} key={i} hasSlug={slug} />)}
         </div>
     )
 }

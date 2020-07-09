@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card, Tooltip, OverlayTrigger } from 'react-bootstrap'
 import snake from '../assets/snake.png'
 
 
@@ -96,6 +96,14 @@ const PicLoader = props => {
         return null
     }
 
+    const renderTooltip = (props) => {
+        return (
+            <Tooltip id="button-tooltip" {...props}>
+                Click for more Info
+            </Tooltip>
+        );
+    }
+
     return (
 
         <div className="pic-container">
@@ -111,7 +119,14 @@ const PicLoader = props => {
                         <Card.Img variant='top' className={'card-img-top'} src={data.image !== null ? data.image : snake} />
                         <Card.Text></Card.Text>
                         <Card.Title>{
-                            data.analizing ? <span>Analizing Picture</span> : (data.result !== null ? <a href={getSlug()}> {data.result.snake} </a> : "Upload a Snake Pic")}
+                            data.analizing ? <span>Analizing Picture</span> : (data.result !== null ?
+                                <OverlayTrigger
+                                    placement="top"
+                                    delay={{ show: 250, hide: 400 }}
+                                    overlay={renderTooltip}
+                                >
+                                    <a href={getSlug()}> {data.result.snake} </a>
+                                </OverlayTrigger> : "Upload a Snake Pic")}
                         </Card.Title>
                         <Card.Text>
                             {data.result !== null ? getProperties().label : <span>&nbsp;</span>}

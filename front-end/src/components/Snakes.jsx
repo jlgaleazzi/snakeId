@@ -1,9 +1,10 @@
 import React from "react"
 import { Card } from 'react-bootstrap'
 
-const Snakes = (props) => {
-    return (
 
+const Snakes = (props) => {
+
+    return (
         < Card bg='light' style={{ width: '30rem' }}>
             <Card.Body>
                 <Card.Title>{props.data.longName}</Card.Title>

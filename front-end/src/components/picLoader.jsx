@@ -89,7 +89,12 @@ const PicLoader = props => {
         return { bg: 'light', label: 'Non venomous' }
     }
 
-
+    const getSlug = () => {
+        if (data.result) {
+            return "/snakes/" + data.result.slug;
+        }
+        return null
+    }
 
     return (
 
@@ -106,7 +111,7 @@ const PicLoader = props => {
                         <Card.Img variant='top' className={'card-img-top'} src={data.image !== null ? data.image : snake} />
                         <Card.Text></Card.Text>
                         <Card.Title>{
-                            data.analizing ? <span>Analizing Picture</span> : (data.result !== null ? data.result.snake : "Upload a Snake Pic")}
+                            data.analizing ? <span>Analizing Picture</span> : (data.result !== null ? <a href={getSlug()}> {data.result.snake} </a> : "Upload a Snake Pic")}
                         </Card.Title>
                         <Card.Text>
                             {data.result !== null ? getProperties().label : <span>&nbsp;</span>}

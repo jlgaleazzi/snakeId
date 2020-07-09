@@ -10,7 +10,8 @@ const App = () => {
             <Menu />
             <Switch>
                 <Route exact path="/" component={PicHolder} />
-                <Route path="/snakes" component={SnakesPage} />
+                <Route exact path="/snakes" component={SnakesPage} />
+                <Route path="/snakes/:slug" component={SnakesPage} />
             </Switch>
         </div>
     )

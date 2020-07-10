@@ -5,7 +5,7 @@ The concept is to upload a pictureof a Snake and the app will return what specie
 
 The model was trained with thousands of pictures from central texas
 
-see it live at :https://snakeid.herokuapp.com/
+
 
 
 this app was created as the final project for the UT at Austin, Data Visualization Bootcamp

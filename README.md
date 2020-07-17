@@ -21,7 +21,7 @@ download docker container from docker hub
 docker pull jgaleazzi/snakeid
 
 # Give it a try
-live project is running in [centraltxsnakes.com](https://centraltxsnakes.com)
+live project is running in [www.centraltxsnakes.com](https://www.centraltxsnakes.com)
 
 
 

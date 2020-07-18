@@ -13,7 +13,7 @@ To run locally you must have [Node.js](https://nodejs.org/en/) v10
 
 # Installation
 Clone the repo (https://github.com/jlgaleazzi/snakeId.git)
-navigate to project root directory on command line (terminal for mac)
+navigate to project root directory on command line (terminal for mac)\
 run pip3 install -r requirements.txt
 
 -- or --\

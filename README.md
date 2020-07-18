@@ -30,10 +30,10 @@ this app was created as the final project for the UT at Austin, Data Visualizati
 
 The stack used to create it was
 
--- changelog --
-Refactored Front End with React 16.0
-Updated for Python 3.7
-Updated TensorFlow to 1.14
+-- changelog --\
+Refactored Front End with React 16.0\
+Updated for Python 3.7\
+Updated TensorFlow to 1.14\
 
 [Flask Server](https://flask.palletsprojects.com/en/1.1.x/)\
 Python 2.7\

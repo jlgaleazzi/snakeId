@@ -16,8 +16,8 @@ Clone the repo (https://github.com/jlgaleazzi/snakeId.git)
 navigate to project root directory on command line (terminal for mac)
 run pip3 install -r requirements.txt
 
--- or --
-download docker container from docker hub
+-- or --\
+download docker container from docker hub\
 docker pull jgaleazzi/snakeid
 
 # Give it a try

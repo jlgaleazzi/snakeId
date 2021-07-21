@@ -8,7 +8,7 @@ The model was trained with thousands of pictures from central texas
 
 # Requirements
 
-To run locally you must have [Node.js](https://nodejs.org/en/) v10 
+To run locally you must have
 [Python 3.7](https://www.python.org/downloads/release/python-370/)
 
 # Installation
